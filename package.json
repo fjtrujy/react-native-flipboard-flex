@@ -1,0 +1,25 @@
+{
+  "name": "react-native-flipboard-flex",
+  "version": "1.0.0",
+  "description": "FLEX (Flipboard Explorer) from react-native",
+  "homepage": "https://github.com/fjtrujy/react-native-flipboard-flex",
+  "keywords": [
+    "react-native",
+    "react-flex",
+    "flipboard-flex",
+    "flex"
+  ],
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fjtrujy/react-native-flipboard-flex.git"
+  },
+  "author": "Francisco Javier Trujillo Mata",
+  "license": "MIT",
+  "peerDependencies": {
+    "react-native": "^0.54.0"
+  }
+}
