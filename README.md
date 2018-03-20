@@ -1,5 +1,5 @@
 
-# react-native-react-native-flex
+# react-native-flipboard-flex
 
 ## Getting started
 
