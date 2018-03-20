@@ -1,6 +1,6 @@
 
 import { NativeModules } from 'react-native';
 
-const { FTMReactNativeFlex } = NativeModules;
+const { RNFlipboardFlex } = NativeModules;
 
-export default FTMReactNativeFlex;
+export default RNFlipboardFlex;

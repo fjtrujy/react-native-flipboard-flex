@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B5435A9A2051C5C900DE7C3D /* FTMReactNativeFlex.m in Sources */ = {isa = PBXBuildFile; fileRef = B5435A982051C5C900DE7C3D /* FTMReactNativeFlex.m */; };
+		B5435A9A2051C5C900DE7C3D /* RNFlipboardFlex.m in Sources */ = {isa = PBXBuildFile; fileRef = B5435A982051C5C900DE7C3D /* RNFlipboardFlex.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,9 +23,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		134814201AA4EA6300B7C361 /* libFTMReactNativeFlex.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libFTMReactNativeFlex.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		B5435A982051C5C900DE7C3D /* FTMReactNativeFlex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTMReactNativeFlex.m; sourceTree = "<group>"; };
-		B5435A992051C5C900DE7C3D /* FTMReactNativeFlex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTMReactNativeFlex.h; sourceTree = "<group>"; };
+		134814201AA4EA6300B7C361 /* libRNFlipboardFlex.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRNFlipboardFlex.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5435A982051C5C900DE7C3D /* RNFlipboardFlex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNFlipboardFlex.m; sourceTree = "<group>"; };
+		B5435A992051C5C900DE7C3D /* RNFlipboardFlex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNFlipboardFlex.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,7 +42,7 @@
 		134814211AA4EA7D00B7C361 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				134814201AA4EA6300B7C361 /* libFTMReactNativeFlex.a */,
+				134814201AA4EA6300B7C361 /* libRNFlipboardFlex.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -58,8 +58,8 @@
 		B5435A972051C5C900DE7C3D /* reactNativeFlex */ = {
 			isa = PBXGroup;
 			children = (
-				B5435A992051C5C900DE7C3D /* FTMReactNativeFlex.h */,
-				B5435A982051C5C900DE7C3D /* FTMReactNativeFlex.m */,
+				B5435A992051C5C900DE7C3D /* RNFlipboardFlex.h */,
+				B5435A982051C5C900DE7C3D /* RNFlipboardFlex.m */,
 			);
 			path = reactNativeFlex;
 			sourceTree = "<group>";
@@ -67,9 +67,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		58B511DA1A9E6C8500147676 /* FTMReactNativeFlex */ = {
+		58B511DA1A9E6C8500147676 /* RNFlipboardFlex */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 58B511EF1A9E6C8500147676 /* Build configuration list for PBXNativeTarget "FTMReactNativeFlex" */;
+			buildConfigurationList = 58B511EF1A9E6C8500147676 /* Build configuration list for PBXNativeTarget "RNFlipboardFlex" */;
 			buildPhases = (
 				58B511D71A9E6C8500147676 /* Sources */,
 				58B511D81A9E6C8500147676 /* Frameworks */,
@@ -79,9 +79,9 @@
 			);
 			dependencies = (
 			);
-			name = FTMReactNativeFlex;
+			name = RNFlipboardFlex;
 			productName = RCTDataManager;
-			productReference = 134814201AA4EA6300B7C361 /* libFTMReactNativeFlex.a */;
+			productReference = 134814201AA4EA6300B7C361 /* libRNFlipboardFlex.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -98,7 +98,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 58B511D61A9E6C8500147676 /* Build configuration list for PBXProject "FTMReactNativeFlex" */;
+			buildConfigurationList = 58B511D61A9E6C8500147676 /* Build configuration list for PBXProject "RNFlipboardFlex" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -110,7 +110,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				58B511DA1A9E6C8500147676 /* FTMReactNativeFlex */,
+				58B511DA1A9E6C8500147676 /* RNFlipboardFlex */,
 			);
 		};
 /* End PBXProject section */
@@ -120,7 +120,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B5435A9A2051C5C900DE7C3D /* FTMReactNativeFlex.m in Sources */,
+				B5435A9A2051C5C900DE7C3D /* RNFlipboardFlex.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,7 +219,7 @@
 				);
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = FTMReactNativeFlex;
+				PRODUCT_NAME = RNFlipboardFlex;
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -235,7 +235,7 @@
 				);
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = FTMReactNativeFlex;
+				PRODUCT_NAME = RNFlipboardFlex;
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
@@ -243,7 +243,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		58B511D61A9E6C8500147676 /* Build configuration list for PBXProject "FTMReactNativeFlex" */ = {
+		58B511D61A9E6C8500147676 /* Build configuration list for PBXProject "RNFlipboardFlex" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				58B511ED1A9E6C8500147676 /* Debug */,
@@ -252,7 +252,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		58B511EF1A9E6C8500147676 /* Build configuration list for PBXNativeTarget "FTMReactNativeFlex" */ = {
+		58B511EF1A9E6C8500147676 /* Build configuration list for PBXNativeTarget "RNFlipboardFlex" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				58B511F01A9E6C8500147676 /* Debug */,

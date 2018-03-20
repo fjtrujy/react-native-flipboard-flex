@@ -7,11 +7,11 @@ import com.facebook.react.bridge.ReactMethod;
 import com.facebook.react.bridge.Callback;
 import android.util.Log;
 
-public class FTMReactNativeFlexModule extends ReactContextBaseJavaModule {
-  private final static String MODULE_NAME = "FTMReactNativeFlex";
+public class RNFlipboardFlex extends ReactContextBaseJavaModule {
+  private final static String MODULE_NAME = "RNFlipboardFlex";
   private final ReactApplicationContext reactContext;
 
-  public FTMReactNativeFlexModule(ReactApplicationContext reactContext) {
+  public RNFlipboardFlex(ReactApplicationContext reactContext) {
     super(reactContext);
     this.reactContext = reactContext;
   }

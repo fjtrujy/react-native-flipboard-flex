@@ -1,17 +1,17 @@
 //
-//  FTMReactNativeFlex.m
-//  FTMReactNativeFlex
+//  RNFlipboardFlex.m
+//  RNFlipboardFlex
 //
 //  Created by Francisco Javier Trujillo Mata on 08/03/2018.
 //  Copyright © 2018 Facebook. All rights reserved.
 //
 
-#import "FTMReactNativeFlex.h"
+#import "RNFlipboardFlex.h"
 #import "FLEXManager.h"
 
-@implementation FTMReactNativeFlex
+@implementation RNFlipboardFlex
 
-// To export a module named FTMReactNativeFlex
+// To export a module named RNFlipboardFlex
 RCT_EXPORT_MODULE();
 
 RCT_EXPORT_METHOD(showExplorer)

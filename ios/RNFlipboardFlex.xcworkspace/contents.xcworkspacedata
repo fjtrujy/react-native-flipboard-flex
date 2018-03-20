@@ -2,7 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:FTMReactNativeFlex.xcodeproj">
+      location = "group:RNFlipboardFlex.xcodeproj">
    </FileRef>
 </Workspace>
-  
