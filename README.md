@@ -1,53 +1,192 @@
-
 # react-native-flipboard-flex
 
-## Getting started
+[![npm version](https://badge.fury.io/js/react-native-flipboard-flex.svg)](http://badge.fury.io/js/react-native-flipboard-flex)
 
-`$ npm install react-native-react-native-flex --save`
+Device Information for [React Native](https://github.com/facebook/react-native).
 
-### Mostly automatic installation
+## TOC
 
-`$ react-native link react-native-react-native-flex`
+* [General Info](#general-info)
+* [Installation](#installation)
+* [Linking](#linking)
+* [Usage](#usage)
+* [API](#api)
+* [Release Notes](#release-notes)
+* [react-native-web](#react-native-web)
 
-### Manual installation
+## General Info
+
+A React Native library for [Flex](https://github.com/Flipboard/FLEX) tool that belong Flipboard.
+The original tool just support iOS, but this wrapper make at least don't fail either for Android or Web.
+a
+## Installation
+
+Using npm:
+
+```shell
+npm install --save react-native-flibpoard-flex
+```
+
+or using yarn:
+
+```shell
+yarn add react-native-flipboard-flex
+```
+
+> ⚠️ If you are on React Native > 0.47, you must use version 0.11.0 of this library or higher
+
+## Linking
+
+### Automatic
+
+```shell
+react-native link react-native-flipboard-flex
+```
+
+(or using [`rnpm`](https://github.com/rnpm/rnpm) for versions of React Native < 0.27)
+
+```shell
+rnpm link react-native-flipboard-flex
+```
+
+### Manual
+
+<details>
+    <summary>iOS (via Cocoa Pods)</summary>
+
+Add the following line to your build targets in your `Podfile`
+
+`pod 'RNDeviceInfo', :path => '{node_modules_path}/react-native-flipboard-flex'`
+
+Where `{node_modules_path}` is the path where you have the `node_modules`, ussually one level up.
+
+Then run `pod install`
+
+</details>
+
+<details>
+    <summary>Android</summary>
+
+* **_optional_** in `android/build.gradle`:
+
+```gradle
+...
+  ext {
+    // dependency versions
+    googlePlayServicesVersion = "<Your play services version>" // default: "+"
+    compileSdkVersion = "<Your compile SDK version>" // default: 23
+    buildToolsVersion = "<Your build tools version>" // default: "25.0.2"
+    targetSdkVersion = "<Your target SDK version>" // default: 22
+  }
+...
+```
+
+* in `android/app/build.gradle`:
+
+```diff
+dependencies {
+    ...
+    compile "com.facebook.react:react-native:+"  // From node_modules
++   compile project(':react-native-flipboard-flex')
+}
+```
+
+* in `android/settings.gradle`:
+
+```diff
+...
+include ':app'
++ include ':react-native-flipboard-flex'
++ project(':react-native-flipboard-flex').projectDir = new File(rootProject.projectDir, '{node_modules_path}/react-native-flipboard-flex/android')
+```
+
+Where `{node_modules_path}` is the path where you have the `node_modules`, ussually one level up.
 
 
-#### iOS
+#### With React Native 0.29+
 
-1. In XCode, in the project navigator, right click `Libraries` ➜ `Add Files to [your project's name]`
-2. Go to `node_modules` ➜ `react-native-react-native-flex` and add `FTMReactNativeFlex.xcodeproj`
-3. In XCode, in the project navigator, select your project. Add `libFTMReactNativeFlex.a` to your project's `Build Phases` ➜ `Link Binary With Libraries`
-4. Run your project (`Cmd+R`)<
+* in `MainApplication.java`:
 
-#### Android
+```diff
++ import com.learnium.RNDeviceInfo.RNDeviceInfo;
 
-1. Open up `android/app/src/main/java/[...]/MainActivity.java`
-  - Add `import com.reactlibrary.FTMReactNativeFlexPackage;` to the imports at the top of the file
-  - Add `new FTMReactNativeFlexPackage()` to the list returned by the `getPackages()` method
-2. Append the following lines to `android/settings.gradle`:
-  	```
-  	include ':react-native-react-native-flex'
-  	project(':react-native-react-native-flex').projectDir = new File(rootProject.projectDir, 	'../node_modules/react-native-react-native-flex/android')
-  	```
-3. Insert the following lines inside the dependencies block in `android/app/build.gradle`:
-  	```
-      compile project(':react-native-react-native-flex')
-  	```
+  public class MainApplication extends Application implements ReactApplication {
+    //......
 
-#### Windows
-[Read it! :D](https://github.com/ReactWindows/react-native)
+    @Override
+    protected List<ReactPackage> getPackages() {
+      return Arrays.<ReactPackage>asList(
++         new RNFlipboardFlexPackage(),
+          new MainReactPackage()
+      );
+    }
 
-1. In Visual Studio add the `FTMReactNativeFlex.sln` in `node_modules/react-native-react-native-flex/windows/FTMReactNativeFlex.sln` folder to their solution, reference from their app.
-2. Open up your `MainPage.cs` app
-  - Add `using React.Native.Flex.FTMReactNativeFlex;` to the usings at the top of the file
-  - Add `new FTMReactNativeFlexPackage()` to the `List<IReactPackage>` returned by the `Packages` method
+    ......
+  }
+```
 
+#### With older versions of React Native:
+
+* in `MainActivity.java`:
+
+```diff
++ import com.learnium.RNDeviceInfo.RNDeviceInfo;
+
+  public class MainActivity extends ReactActivity {
+    ......
+
+    @Override
+    protected List<ReactPackage> getPackages() {
+      return Arrays.<ReactPackage>asList(
++       new RNFlipboardFlexPackage(),
+        new MainReactPackage()
+      );
+    }
+  }
+```
+
+
+</details>
 
 ## Usage
-```javascript
-import FTMReactNativeFlex from 'react-native-react-native-flex';
 
-// TODO: What to do with the module?
-FTMReactNativeFlex;
+```js
+var RNFlipboardFlex = require('react-native-flipboard-flex');
+// or import RNFlipboardFlex from 'react-native-flipboard-flex';
 ```
-  
+
+## API
+
+| Method                                            | Return Type         |  iOS | Android | Since  |
+| ------------------------------------------------- | ------------------- | :--: | :-----: | :-----: |
+| [showExplorer()](#showExplorer)                     | `void`              |  ✅  |   ✅    | 1.0.0 |
+
+---
+
+### showExplorer()
+
+Show Flex explorer.
+
+**Examples**
+
+```js
+RNFlipboardFlex.showExplorer();
+
+// iOS: Will Show the flex explorer
+// Android: Will do nothing
+```
+
+**Notes**
+
+> See [Flex github](https://github.com/Flipboard/FLEX)
+
+---
+
+
+## Release Notes
+
+See the [CHANGELOG.md](https://github.com/fjtrujy/react-native-flipboard-flex/blob/master/CHANGELOG.md).
+
+## react-native-web
+
+This library was made compatible with [react-native-web](https://github.com/necolas/react-native-web) by providing an empty polyfill in order to avoid breaking builds.
