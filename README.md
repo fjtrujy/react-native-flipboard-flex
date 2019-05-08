@@ -56,7 +56,7 @@ rnpm link react-native-flipboard-flex
 
 Add the following line to your build targets in your `Podfile`
 
-`pod 'RNDeviceInfo', :path => '{node_modules_path}/react-native-flipboard-flex'`
+`pod 'react-native-flipboard-flex', :path => '{node_modules_path}/react-native-flipboard-flex'`
 
 Where `{node_modules_path}` is the path where you have the `node_modules`, ussually one level up.
 
@@ -108,7 +108,7 @@ Where `{node_modules_path}` is the path where you have the `node_modules`, ussua
 * in `MainApplication.java`:
 
 ```diff
-+ import com.learnium.RNDeviceInfo.RNDeviceInfo;
++ import com.fjtrujy.flex;
 
   public class MainApplication extends Application implements ReactApplication {
     //......
@@ -130,7 +130,7 @@ Where `{node_modules_path}` is the path where you have the `node_modules`, ussua
 * in `MainActivity.java`:
 
 ```diff
-+ import com.learnium.RNDeviceInfo.RNDeviceInfo;
++ import com.fjtrujy.flex;
 
   public class MainActivity extends ReactActivity {
     ......
