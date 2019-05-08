@@ -160,6 +160,8 @@ var RNFlipboardFlex = require('react-native-flipboard-flex');
 | Method                                            | Return Type         |  iOS | Android | Since  |
 | ------------------------------------------------- | ------------------- | :--: | :-----: | :-----: |
 | [showExplorer()](#showExplorer)                     | `void`              |  ✅  |   ✅    | 1.0.0 |
+| [hideExplorer()](#hideExplorer)                     | `void`              |  ✅  |   ✅    | 1.0.3 |
+| [toggleExplorer()](#toggleExplorer)                 | `void`              |  ✅  |   ✅    | 1.0.3 |
 
 ---
 
@@ -173,6 +175,32 @@ Show Flex explorer.
 RNFlipboardFlex.showExplorer();
 
 // iOS: Will Show the flex explorer
+// Android: Will do nothing
+```
+
+### hideExplorer()
+
+Hide Flex explorer.
+
+**Examples**
+
+```js
+RNFlipboardFlex.hideExplorer();
+
+// iOS: Will hide the flex explorer
+// Android: Will do nothing
+```
+
+### toggleExplorer()
+
+Will Show Flex explorer if it is hidden and will hide the exploer if it is shown.
+
+**Examples**
+
+```js
+RNFlipboardFlex.toggleExplorer();
+
+// iOS: Will toggle the flex explorer
 // Android: Will do nothing
 ```
 

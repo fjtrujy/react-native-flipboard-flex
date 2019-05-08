@@ -21,4 +21,18 @@ RCT_EXPORT_METHOD(showExplorer)
     });
 }
 
+RCT_EXPORT_METHOD(hideExplorer)
+{
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [[FLEXManager sharedManager] hideExplorer];
+    });
+}
+
+RCT_EXPORT_METHOD(toggleExplorer)
+{
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [[FLEXManager sharedManager] toggleExplorer];
+    });
+}
+
 @end

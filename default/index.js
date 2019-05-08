@@ -1,5 +1,7 @@
 
 
 module.export = {
-    showExplorer: () => {}
+    showExplorer: () => {},
+    hideExplorer: () => {},
+    toggleExplorer: () => {},
 }

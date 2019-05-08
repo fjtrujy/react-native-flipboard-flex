@@ -26,4 +26,16 @@ public class RNFlipboardFlex extends ReactContextBaseJavaModule {
     //There are no FLEX library for Android
     Log.d("FLEX Library:","Android is not supported");
   }
+
+  @ReactMethod
+  public void hideExplorer() {
+    //There are no FLEX library for Android
+    Log.d("FLEX Library:","Android is not supported");
+  }
+
+  @ReactMethod
+  public void toogleExplorer() {
+    //There are no FLEX library for Android
+    Log.d("FLEX Library:","Android is not supported");
+  }
 }
